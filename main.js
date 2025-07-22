@@ -9,7 +9,10 @@ let home = document.querySelector(".home")
 let escala = document.querySelector('.escala')
 let Opening = document.querySelector('.Opening')
 
+let footer = document.getElementById("footer")
+
 setTimeout(function() {
+ footer.classList.remove("hidden")
  Opening.classList.add("hidden")
 },1500)
 
