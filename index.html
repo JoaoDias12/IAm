@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet/less" type="text/css" href="/style.less" />
+
+</head>
+<body>
+
+ <div class="home hidde">
+
+    <div class="me">
+      <h1>Matricula :</h1>
+      <input autocomplete="off" type="text" id="register" placeholder="Digite a matrícula" value="">
+    </div>
+
+    <div class="title">
+     <h2>I am?</h2>
+     <p>Primeiro Horario!</p>
+    </div>
+
+    <div class="Opening hidde">
+        <h2>Bem Vindo!</h2>
+        <div class="ball1 ball"></div>
+        <div class="ball2 ball"></div>
+        <div class="ball3 ball"></div>
+        <div class="ball4 ball"></div>
+        <div class="ball5 ball"></div>
+        <div class="ball6 ball"></div>
+        <div class="ball7 ball"></div>
+
+
+        <div class="loading">
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+        </div>
+    </div>
+
+    <main>
+        <h2 id="whatTime"></h2>
+        <h3 id="whatHours">17:30 / 23:30</h3>
+    </main>
+
+ </div>
+
+ <div class="escala hidden">
+    <!--  <img src="img/Escala.jpg" alt="">-->
+
+    <div class="listTimes">
+        <div class="turno">
+            <h3>Primeiro Turno</h3>
+            <p>(H1 - 16:15 às 22:15)</p>
+            <div id="firstTime"></div>
+        </div>
+        
+        <div class="turno">
+            <h3>Segundo Turno</h3>
+            <p>(H2 - 17:30 às 23:30)</p>
+            <div id="secondTime"></div>
+        </div>
+        
+        <div class="turno">
+            <h3>Folga</h3>
+            <div id="slackDay"></div>
+        </div>
+    </div>
+ </div>
+
+ <footer>
+    <button id="btnHome">Home</button>
+    <button id="btnEscala">Escala</button>
+</footer>
+
+</body>
+
+<script src="less.js"></script>
+<script src="main.js"></script>
+</html>

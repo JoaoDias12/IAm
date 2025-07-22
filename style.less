@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    user-select: none;
+  }
+  
+  body {
+      -webkit-touch-callout: none;
+      -webkit-text-size-adjust: none;
+      -webkit-user-select: none;
+      font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+      font-size:12px;
+  
+      background: #002f6c25;
+
+      width: 99%;
+      height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .home, .escala {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+    transform: translateX(0);
+      opacity: 1;
+  }
+
+  .home.saindo {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  
+  .escala.saindo {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  
+  .home {
+    width: 100vw;
+      height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+       z-index: 5;
+
+
+      .me {
+        position: fixed;
+        top: 16px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        h1, input {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #002e69;
+        }
+
+        input {
+            width: 5rem;
+            background: none;
+            outline: none;
+            margin-top: 0.2rem;
+        }
+      }
+  }
+
+  .title {
+    position: absolute;
+    top: 128px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.6rem;
+    
+    h2 {
+        color: #0048a7;
+    }
+
+    p {
+        color: #0048a7;
+        font-weight: 700;
+    }
+  }
+
+  .Opening {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+
+    background: white;
+
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .loading {
+       width: 100%;
+       height: 15rem;
+       position: absolute;
+
+       display: flex;
+       align-items: center;
+       justify-content: center;
+
+       bottom: 5rem;
+
+       .ball {
+        width: 1rem;
+        height: 1rem;
+        background: linear-gradient(to left bottom, #002d68b2, #006effb4);
+        border-radius: 100%;
+        position: absolute;
+        animation: orbit 1s infinite linear;
+        transform-origin: 1.5rem center; /* Isso controla o raio do círculo */
+       }
+    
+       .ball:nth-child(1) { animation-delay: 0s; }
+       .ball:nth-child(2) { animation-delay: -0.33s; }
+       .ball:nth-child(3) { animation-delay: -0.66s; }
+    
+       @keyframes orbit {
+           0% {
+               transform: rotate(0deg) translateX(1.5rem) rotate(0deg);
+           }
+           100% {
+               transform: rotate(360deg) translateX(1.5rem) rotate(-360deg);
+           }
+       }
+    }
+
+
+    h2 {
+        font-weight: 800;
+        font-size:2.4rem;
+
+        color: white;
+
+        -webkit-text-stroke: 2px #003172; 
+
+        position: relative;
+        z-index: 2;
+    }
+
+    .ball {
+        background:  linear-gradient(to left bottom, #002d68b2, #006effb4);
+        border-radius: 100%;
+
+        position: absolute;
+        animation: floatBubble 8s infinite ease-in-out;
+        z-index: 1;
+    }
+
+    .ball1 {
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: 8vh;
+        animation: floatBubble 7s infinite ease-in-out;
+    }
+    
+    .ball2 {
+        width: 2rem;
+        height: 2rem;
+        margin-bottom: -4vh;
+        animation: floatBubble 5s infinite ease-in-out;
+    }
+    
+    .ball3 {
+        width: 6rem;
+        height: 6rem;
+        margin-right: 16vh;
+        animation: floatBubble 9s infinite ease-in-out;
+    }
+    
+    .ball4 {
+        width: 4rem;
+        height: 4rem;
+        margin-right: -16vh;
+        margin-bottom: 12vh;
+        animation: floatBubble 6s infinite ease-in-out;
+    }
+    
+    .ball5 {
+        width: 5rem;
+        height: 5rem;
+        margin-right: -16vh;
+        margin-bottom: -4vh;
+        animation: floatBubble 8s infinite ease-in-out;
+    }
+    
+    .ball6 {
+        width: 8rem;
+        height: 8rem;
+        margin-right: -5vh;
+        margin-bottom: -16vh;
+        animation: floatBubble 10s infinite ease-in-out;
+    }
+    
+    .ball7 {
+        width: 6rem;
+        height: 6rem;
+        margin-right: 5vh;
+        margin-bottom: 16vh;
+        animation: floatBubble 7s infinite ease-in-out;
+    }
+
+    @keyframes floatBubble {
+        0%, 100% {
+            transform: translate(0, 0);
+        }
+        25% {
+            transform: translate(5px, -10px);
+        }
+        50% {
+            transform: translate(-5px, 5px);
+        }
+        75% {
+            transform: translate(10px, -5px);
+        }
+    }
+    
+  }
+
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16rem;
+    height: 16rem;
+    border-radius: 100%;
+    position: relative;
+
+    background: white; 
+
+    h2 {
+        color: #0048a7;
+        font-size: 5rem;
+    }
+
+    h3 {
+        position: absolute;
+        bottom: -64px;
+
+        font-size: 1.8rem;
+        color: #0048a7;
+    }
+  }
+
+  main::before {
+    content: "";
+    position: absolute;
+    top: -16px; /* Espessura da borda */
+    left: -16px;
+    right: -16px;
+    bottom: -16px;
+    border-radius: 100%;
+    background: linear-gradient(to right, #002e69, #006eff);
+    z-index: -1;
+
+    animation: rotateBorder 2s linear infinite; 
+  }
+
+  @keyframes rotateBorder {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+  footer {
+    position: fixed;
+    bottom: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    box-shadow: 0px 0px 4px 0px #002e69;
+
+    z-index: 2;
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 3rem;
+
+        font-size: 1.4rem;
+        font-weight: 900;
+        color: #002f6c;
+    }
+
+    #btnHome {
+        border-right: 2px solid #002f6c;
+    }
+  }
+
+
+  .escala {
+    width: 100vw;
+      height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+
+      .turno {
+        margin: 15px;
+        padding: 40px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+          margin-top: 0;
+          color: #333;
+          border-bottom: 1px solid #eee;
+          font-size: 1.6rem;
+
+          color: #002e69;
+        }
+
+        p {
+          margin-bottom: 1rem;
+          color: #002e69;
+          font-size: 1rem;
+        }
+    }
+    
+     
+    
+    #firstTime h2, #secondTime h2, #slackDay h2 {
+        padding: 4px;
+        border-bottom: 1px solid #eee;
+        color: #0048a7;
+
+        text-align: center;
+    }
+    
+    #firstTime h2:last-child, #secondTime h2:last-child, #slackDay h2:last-child {
+        border-bottom: none;
+    }
+
+  }
+
+  .hidden {
+    position: absolute !important;
+    display: none !important;
+    visibility: hidden !important;
+    top: 9999rem;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+  }
