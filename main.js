@@ -144,7 +144,6 @@ const funcionarios = [
     { matricula: '98014', nome: 'Flavio Lourenço Souza' },
     { matricula: '25137', nome: 'João Vitor Dias' },
     { matricula: '24633', nome: 'Ramon Mendonca Reis' },
-    { matricula: '11366', nome: 'Alex Aparecido Sousa Santos' },
     { matricula: '27215', nome: 'Marya Eduarda dos Santos Rocha' }
 ];
 
@@ -209,6 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Atualiza a cada minuto (opcional)
     setInterval(atualizarListasPorTurno, 60000);
 });
+
 
 
 
