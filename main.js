@@ -52,7 +52,7 @@ if (register.textContent == '') {
 // Dados formatados corretamente: Matrícula + sequência de dias
 
 let allText = [
-  "8843\tF,F,1,2,1,1,F,2,1,2,1,1,2,F,F,2,1,2,1,2,1,f,1,2,1,2,1,1,F,F",
+  "8843\tF,F,1,2,1,1,F,2,1,2,1,1,2,F,F,2,1,2,1,2,1,F,1,2,1,2,1,1,F,F",
   "27029\tF,2,1,1,2,1,2,F,F,2,1,2,1,2,1,F,2,1,2,1,2,2,F,F,2,1,2,2,2,2",
   "27436\tF,2,1,1,1,2,1,F,F,2,1,1,2,1,2,F,2,1,1,2,1,2,F,F,2,1,2,1,2,1",
   "98014\t2,F,2,2,F,F,2,2,1,F,2,1,1,1,2,1,F,F,2,1,2,1,1,1,F,2,1,1,1,2",
@@ -208,6 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Atualiza a cada minuto (opcional)
     setInterval(atualizarListasPorTurno, 60000);
 });
+
 
 
 
